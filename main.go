@@ -71,7 +71,7 @@ func player(name string, partida chan int, pscore *int) {
 		}
 
 		// Imprime o placar
-		fmt.Printf("Placar: [%d | %d]\n", p1Score, p2Score)
+		fmt.Printf("Placar: [%d | %d]\n", p2Score, p1Score)
 
 		/*
 			Verifica se o jogador fez 6 pontos com a diferença de 2 pontos do adversário
