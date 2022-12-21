@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+type Player struct {
+	waiting  bool
+	throwing bool
+}
+
+type Game struct {
+	// É o vencedor quem ganhar 3 de 5 sets.
+	game  int //4 pontos no total, 2 a mais que o adversário
+	set   int // 6 games, 2 a mais que o adversário
+	match int // É uma partidade como um todo que possui 3 a 5  sets
+}
+
+/*
+Por questões de simplicidade, admita que o match possui um único set composto de um único game,
+ganhando o jogo o jogador que alcançar um número de pontos fixo P desse game.
+*/
+func init() {
+	rand.Seed(time.Now().UnixNano()) // rand de forma alearória para determinar se jogador perdeu a bola ou não
+}
+
+func main() {
+
+	var player1 = Player{false, false}
+	var player2 = Player{false, false}
+	var game = Game{0, 0, 0}
+
+	fmt.Println("My favorite number is", player1.throwing)
+}
+/*
+ criar dois chanels
+ A CHANEL1 B
+ A CHANEL2 B
+*/
