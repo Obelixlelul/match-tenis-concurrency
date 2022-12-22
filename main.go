@@ -17,7 +17,7 @@ import (
 	"time"
 )
 
-// wg is used to wait for the program to finish
+// wg é usado para esperar que todas as goroutines lançadas aqui terminem.
 var wg sync.WaitGroup
 
 // função invocada antes da execução do main
