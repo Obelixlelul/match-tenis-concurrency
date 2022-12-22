@@ -77,7 +77,7 @@ func player(name string, partida chan int, pscore *int) {
 			Verifica se o jogador fez 6 pontos com a diferença de 2 pontos do adversário
 			se sim, encerra a partica mudando o status do ok para false
 		*/
-		if p1Score == 6 && p1Score-p2Score >= 2 || p2Score == 6 && p2Score-p1Score >= 2 {
+		if (p1Score >= 6 && p1Score-p2Score >= 2) || (p2Score >= 6 && p2Score-p1Score >= 2) {
 			fmt.Printf("Jogador %s ganhou!!!!\n", name)
 			close(partida)
 			return
